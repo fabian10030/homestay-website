@@ -1,0 +1,44 @@
+/* Background image and font styling for the entire page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/bgg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Styling for the header with overlay */
+header {
+    position: relative;
+    background-image: url('images/bgg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Lapisan hitam dengan transparansi 50% */
+    z-index: -1;
+}
+
+/* Styling for header text to be on top of the overlay */
+header h1,
+header p {
+    position: relative;
+    z-index: 2;
+}
